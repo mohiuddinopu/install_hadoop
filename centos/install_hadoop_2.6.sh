@@ -15,8 +15,12 @@ echo hadoop:hadoop | chpasswd
 
 # download and renames hadoop 
 su -l hadoop -c '
-echo "current user anme is "
+echo "#####################################"
+echo "current user Name is "
 whoami
+echo "#####################################"
+
+rm -rf ~/hadoop*
 
 cd ~
 wget http://apache.claz.org/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz
@@ -25,36 +29,41 @@ mv hadoop-2.6.0 hadoop
 
 
 # updates all path
-cat /tmp/install_hadoop/bashrc_update >> ~/.bashrc
+cat /tmp/install_hadoop/bashrc >> ~/.bashrc
 
 
-export JAVA_HOME=/opt/jdk1.8.0_66/
+export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk.x86_64/
 
 source ~/.bashrc
 
 
 # Updates all configuration files
 
-cat /tmp/install_hadoop/core-site.xml.update > $HADOOP_HOME/etc/hadoop/core-site.xml
-cat /tmp/install_hadoop/hdfs-site.xml.update > $HADOOP_HOME/etc/hadoop/hdfs-site.xml
-cat /tmp/install_hadoop/mapred-site.xml.update > $HADOOP_HOME/etc/hadoop/mapred-site.xml
-cat /tmp/install_hadoop/yarn-site.xml.update > $HADOOP_HOME/etc/hadoop/yarn-site.xml
+cat /tmp/install_hadoop/core-site.xml > $HADOOP_HOME/etc/hadoop/core-site.xml
+cat /tmp/install_hadoop/hdfs-site.xml > $HADOOP_HOME/etc/hadoop/hdfs-site.xml
+cat /tmp/install_hadoop/mapred-site.xml > $HADOOP_HOME/etc/hadoop/mapred-site.xml
+cat /tmp/install_hadoop/yarn-site.xml > $HADOOP_HOME/etc/hadoop/yarn-site.xml
 
 # Fromat namenode
 /home/hadoop/hadoop/bin/hdfs namenode -format
 
+# start yarn
+$HADOOP_HOME/sbin/start-yarn.sh	
 
 # Start Hadoop 
 $HADOOP_HOME/sbin/start-dfs.sh
 
-# start yarn
-$HADOOP_HOME/sbin/start-yarn.sh	
 
 /home/hadoop/hadoop/bin/hdfs dfs -mkdir -p /user/hadoop
 
-/home/hadoop/hadoop/bin/hdfs dfs -put /var/log/httpd logs
 
  '
-adrs=`hostname -I`
+export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk.x86_64/
+source ~/.bashrc
 
-/usr/bin/firefox --new-window http://$adrs:50070
+
+adrs=`hostname -I`
+ 
+/usr/bin/firefox --new-window http://"${adrs// /}":50070/explorer.html#/
+ 
+echo "To check the cluster status browse: " "${adrs// /}":50070
