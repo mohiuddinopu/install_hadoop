@@ -29,7 +29,7 @@ mv hadoop-2.6.0 hadoop
 
 
 # updates all path
-cat /tmp/install_hadoop/bashrc >> ~/.bashrc
+cat $crntdir/bashrc >> ~/.bashrc
 
 
 export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk.x86_64/
@@ -39,10 +39,10 @@ source ~/.bashrc
 
 # Updates all configuration files
 
-cat /tmp/install_hadoop/core-site.xml > $HADOOP_HOME/etc/hadoop/core-site.xml
-cat /tmp/install_hadoop/hdfs-site.xml > $HADOOP_HOME/etc/hadoop/hdfs-site.xml
-cat /tmp/install_hadoop/mapred-site.xml > $HADOOP_HOME/etc/hadoop/mapred-site.xml
-cat /tmp/install_hadoop/yarn-site.xml > $HADOOP_HOME/etc/hadoop/yarn-site.xml
+cat $crntdir/core-site.xml > $HADOOP_HOME/etc/hadoop/core-site.xml
+cat $crntdir/hdfs-site.xml > $HADOOP_HOME/etc/hadoop/hdfs-site.xml
+cat $crntdir/mapred-site.xml > $HADOOP_HOME/etc/hadoop/mapred-site.xml
+cat $crntdir/yarn-site.xml > $HADOOP_HOME/etc/hadoop/yarn-site.xml
 
 # Fromat namenode
 /home/hadoop/hadoop/bin/hdfs namenode -format
