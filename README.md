@@ -25,6 +25,7 @@ Option 2 (Not tested)
     apt-get install git git-core
 
 2. Once the GIT installaiton is done
+
     cd ~
     
     git clone git@github.com/mohiuddinopu/install_hadoop_ansible.git
