@@ -18,3 +18,15 @@ Follow the steps
     hadoop fs -ls /
 
 Ignore the 'not found' error. In case the broswer failed to open, manually open the firefox and navigate to http://localhost:50700
+
+Option 2 (Not tested)
+
+1. As root in your Centos run the following in terminal 
+    apt-get install git git-core
+
+2. Once the GIT installaiton is done
+    cd ~
+    git clone git@github.com/mohiuddinopu/install_hadoop_ansible.git
+    cd install_hadoop_ansible*
+    chmod +x install_hadoop_2.6.sh 
+    ./install_hadoop_2.6.sh
