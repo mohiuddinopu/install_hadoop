@@ -25,45 +25,41 @@ rm -rf ~/hadoop*
 cd ~
 wget http://apache.claz.org/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz
 tar xzf hadoop-2.6.0.tar.gz
-mv hadoop-2.6.0 hadoop
+mv hadoop-2.6.0 /opt/hadoop
 
 
 # updates all path
 cat $crntdir/bashrc >> ~/.bashrc
 
-
+# this export for hadoop user 
 export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk.x86_64/
-
 source ~/.bashrc
 
 
 # Updates all configuration files
 
-cat $crntdir/core-site.xml > $HADOOP_HOME/etc/hadoop/core-site.xml
-cat $crntdir/hdfs-site.xml > $HADOOP_HOME/etc/hadoop/hdfs-site.xml
-cat $crntdir/mapred-site.xml > $HADOOP_HOME/etc/hadoop/mapred-site.xml
-cat $crntdir/yarn-site.xml > $HADOOP_HOME/etc/hadoop/yarn-site.xml
+cat $crntdir/core-site.xml > /opt/hadoop/etc/hadoop/core-site.xml
+cat $crntdir/hdfs-site.xml > /opt/hadoop/etc/hadoop/hdfs-site.xml
+cat $crntdir/mapred-site.xml > /opt/hadoop/etc/hadoop/mapred-site.xml
+cat $crntdir/yarn-site.xml > /opt/hadoop/etc/hadoop/yarn-site.xml
 
 # Fromat namenode
-/home/hadoop/hadoop/bin/hdfs namenode -format
+/opt/hadoop/bin/hdfs namenode -format
 
 # start yarn
-$HADOOP_HOME/sbin/start-yarn.sh	
+/opt/hadoop/sbin/start-yarn.sh	
 
 # Start Hadoop 
-$HADOOP_HOME/sbin/start-dfs.sh
+/opt/hadoop/sbin/start-dfs.sh
 
+/opt/hadoop/hadoop/bin/hdfs dfs -mkdir -p /user/hadoop
+' # end of hadoop user acitivity 
 
-/home/hadoop/hadoop/bin/hdfs dfs -mkdir -p /user/hadoop
-
-
- '
+# this export for root user 
 export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk.x86_64/
 source ~/.bashrc
 
-
 adrs=`hostname -I`
- 
 /usr/bin/firefox --new-window http://"${adrs// /}":50070/explorer.html#/
  
 echo "To check the cluster status browse: " "${adrs// /}":50070
