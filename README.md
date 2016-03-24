@@ -22,7 +22,8 @@ Ignore the 'not found' error. In case the broswer failed to open, manually open 
 Option 2 (Not tested)
 
 1. As root in your Centos run the following in terminal 
-    apt-get install git git-core
+
+    yum install git git-core
 
 2. Once the GIT installaiton is done
 
