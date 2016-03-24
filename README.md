@@ -26,7 +26,11 @@ Option 2 (Not tested)
 
 2. Once the GIT installaiton is done
     cd ~
-    \git clone git@github.com/mohiuddinopu/install_hadoop_ansible.git
-    \cd install_hadoop_ansible*
-    \chmod +x install_hadoop_2.6.sh 
-    \./install_hadoop_2.6.sh
+    
+    git clone git@github.com/mohiuddinopu/install_hadoop_ansible.git
+    
+    cd install_hadoop_ansible*
+    
+    chmod +x install_hadoop_2.6.sh 
+    
+    ./install_hadoop_2.6.sh
