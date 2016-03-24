@@ -29,7 +29,7 @@ Option 2 (Not tested)
 
     cd ~
     
-    git clone git@github.com/mohiuddinopu/install_hadoop_ansible.git
+    git clone https://github.com/mohiuddinopu/install_hadoop_ansible.git
     
     cd install_hadoop_ansible*
     
