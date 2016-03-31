@@ -14,46 +14,45 @@ adduser hadoop
 echo hadoop:hadoop | chpasswd
 
 # download and renames hadoop 
-#su -l hadoop -c '
-#echo "#####################################"
-#echo "current user Name is "
-#whoami
-#echo "#####################################"
-
 rm -rf /opt/hadoop*
+wget http://apache.claz.org/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz
+tar xzf hadoop-2.6.0.tar.gz
+mv hadoop-2.6.0 /opt/hadoop
+chmod 777 /opt/hadoop
+
+# updates all path
+cat $crntdir/bashrc.sh >> /home/hadoop/.bashrc
+
+
+# this export for hadoop user 
+#export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk.x86_64/
+
+# Updates all configuration files
+
+cat $PWD/core-site.xml > /opt/hadoop/etc/hadoop/core-site.xml
+cat $PWD/hdfs-site.xml > /opt/hadoop/etc/hadoop/hdfs-site.xml
+cat $PWD/mapred-site.xml > /opt/hadoop/etc/hadoop/mapred-site.xml
+cat $PWD/yarn-site.xml > /opt/hadoop/etc/hadoop/yarn-site.xml
+
+# this export for root user 
+export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk.x86_64/
+source ~/.bashrc
+
+
+
+su -l hadoop -c '
+echo "#####################################"
+echo "current user Name is "
+whoami
+echo "#####################################"
 
 cd ~
+source ~/.bashrc
 
 ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 chmod 0600 ~/.ssh/authorized_keys
 
-
-wget http://apache.claz.org/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz
-tar xzf hadoop-2.6.0.tar.gz
-mv hadoop-2.6.0 /opt/hadoop
-
-
-# updates all path
-cat $crntdir/bashrc >> /home/hadoop/.bashrc
-
-
-su -l hadoop -c '
-
-# this export for hadoop user 
-export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk.x86_64/
-source ~/.bashrc
-
-# Updates all configuration files
-
-cat $crntdir/core-site.xml > /opt/hadoop/etc/hadoop/core-site.xml
-cat $crntdir/hdfs-site.xml > /opt/hadoop/etc/hadoop/hdfs-site.xml
-cat $crntdir/mapred-site.xml > /opt/hadoop/etc/hadoop/mapred-site.xml
-cat $crntdir/yarn-site.xml > /opt/hadoop/etc/hadoop/yarn-site.xml
-
-# this export for root user 
-export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk.x86_64/
-source ~/.bashrc
 
 # Fromat namenode
 /opt/hadoop/bin/hdfs namenode -format
