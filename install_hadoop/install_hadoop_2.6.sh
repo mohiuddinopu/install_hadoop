@@ -24,6 +24,11 @@ rm -rf /opt/hadoop*
 
 cd ~
 
+ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+chmod 0600 ~/.ssh/authorized_keys
+
+
 wget http://apache.claz.org/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz
 tar xzf hadoop-2.6.0.tar.gz
 mv hadoop-2.6.0 /opt/hadoop
@@ -38,9 +43,6 @@ su -l hadoop -c '
 # this export for hadoop user 
 export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk.x86_64/
 source ~/.bashrc
-
-' # end of hadoop user acitivity 
-
 
 # Updates all configuration files
 
@@ -64,6 +66,10 @@ source ~/.bashrc
 
 # make testing hdfs directory
 /opt/hadoop/hadoop/bin/hdfs dfs -mkdir -p /user/hadoop
+
+
+' # end of hadoop user acitivity 
+
 
 adrs=`hostname -I`
 /usr/bin/firefox --new-window http://"${adrs// /}":50070/explorer.html#/
