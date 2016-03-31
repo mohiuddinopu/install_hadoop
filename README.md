@@ -36,7 +36,7 @@ Option 2
 
     cd ~
     
-    git clone https://github.com/mohiuddinopu/install_hadoop_ansible.git
+    git clone https://github.com/mohiuddinopu/install_hadoop.git
     
     cd install_hadoop/installhadoop
     
