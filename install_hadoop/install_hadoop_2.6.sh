@@ -60,11 +60,16 @@ chmod 0600 ~/.ssh/authorized_keys
 # start yarn
 /opt/hadoop/sbin/start-yarn.sh	
 
+
+sleep 30
+
 # Start Hadoop 
 /opt/hadoop/sbin/start-dfs.sh
 
+sleep 30
+
 # make testing hdfs directory
-/opt/hadoop/bin/hdfs dfs -mkdir -p /user/hadoop
+#/opt/hadoop/bin/hdfs dfs -mkdir -p /user/hadoop
 
 
 ' # end of hadoop user acitivity 
