@@ -64,7 +64,7 @@ chmod 0600 ~/.ssh/authorized_keys
 /opt/hadoop/sbin/start-dfs.sh
 
 # make testing hdfs directory
-/opt/hadoop/hadoop/bin/hdfs dfs -mkdir -p /user/hadoop
+/opt/hadoop/bin/hdfs dfs -mkdir -p /user/hadoop
 
 
 ' # end of hadoop user acitivity 
