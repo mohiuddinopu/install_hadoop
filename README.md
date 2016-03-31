@@ -19,7 +19,7 @@ Follow the steps
 
 Ignore the 'not found' error. In case the broswer failed to open, manually open the firefox and navigate to http://localhost:50700
 
-Option 2 (Not tested)
+Option 2 
 
 1. As root in your Centos run the following in terminal 
 
@@ -31,7 +31,7 @@ Option 2 (Not tested)
     
     git clone https://github.com/mohiuddinopu/install_hadoop_ansible.git
     
-    cd install_hadoop_ansible*
+    cd install_hadoop/installhadoop
     
     chmod +x install_hadoop_2.6.sh 
     
