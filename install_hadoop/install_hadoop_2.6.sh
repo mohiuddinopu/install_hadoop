@@ -15,6 +15,7 @@ echo hadoop:hadoop | chpasswd
 # download and renames hadoop 
 rm -rf /opt/hadoop*
 
+cd ~
 
 if test -e "hadoop-2.6.0.tar.gz";then
 
