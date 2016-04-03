@@ -1,5 +1,4 @@
-# current dir
-crntdir=`pwd`
+# This script assumes, you have a centos installed and can access root account. 
 
 # install Java
 yum install java
@@ -21,7 +20,7 @@ mv hadoop-2.6.0 /opt/hadoop
 chmod 777 /opt/hadoop
 
 # updates all path
-cat $crntdir/bashrc.sh >> /home/hadoop/.bashrc
+cat $PWD/bashrc.sh >> /home/hadoop/.bashrc
 
 
 # this export for hadoop user 
@@ -55,16 +54,17 @@ chmod 0600 ~/.ssh/authorized_keys
 
 
 # Fromat namenode
-/opt/hadoop/bin/hdfs namenode -format
+cd /opt/hadoop/bin/
+./hdfs namenode -format
 
 # start yarn
-/opt/hadoop/sbin/start-yarn.sh	
+./start-yarn.sh	
 
 
 sleep 30
 
 # Start Hadoop 
-/opt/hadoop/sbin/start-dfs.sh
+./start-dfs.sh
 
 sleep 30
 
@@ -76,6 +76,6 @@ sleep 30
 
 
 adrs=`hostname -I`
-/usr/bin/firefox --new-window http://"${adrs// /}":50070/explorer.html#/
+#/usr/bin/firefox --new-window http://"${adrs// /}":50070/explorer.html#/
  
 echo "To check the cluster status browse: " "${adrs// /}":50070
