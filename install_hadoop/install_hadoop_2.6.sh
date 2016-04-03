@@ -37,7 +37,7 @@ fi
 
 
 # updates all path
-cat $PWD/bashrc.sh >> /home/hadoop/.bashrc
+cat /tmp/install_hadoop/install_hadoop/bashrc.sh >> /home/hadoop/.bashrc
 
 
 # this export for hadoop user 
@@ -45,10 +45,10 @@ cat $PWD/bashrc.sh >> /home/hadoop/.bashrc
 
 # Updates all configuration files
 
-cat $PWD/core-site.xml > /opt/hadoop/etc/hadoop/core-site.xml
-cat $PWD/hdfs-site.xml > /opt/hadoop/etc/hadoop/hdfs-site.xml
-cat $PWD/mapred-site.xml > /opt/hadoop/etc/hadoop/mapred-site.xml
-cat $PWD/yarn-site.xml > /opt/hadoop/etc/hadoop/yarn-site.xml
+cat /tmp/install_hadoop/install_hadoop/core-site.xml > /opt/hadoop/etc/hadoop/core-site.xml
+cat /tmp/install_hadoop/install_hadoop/hdfs-site.xml > /opt/hadoop/etc/hadoop/hdfs-site.xml
+cat /tmp/install_hadoop/install_hadoop/mapred-site.xml > /opt/hadoop/etc/hadoop/mapred-site.xml
+cat /tmp/install_hadoop/install_hadoop/yarn-site.xml > /opt/hadoop/etc/hadoop/yarn-site.xml
 
 # this export for root user 
 export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk.x86_64/
@@ -72,6 +72,7 @@ chmod 0600 ~/.ssh/authorized_keys
 
 # Fromat namenode
 cd /opt/hadoop/bin/
+echo "Current dir" pwd
 ./hdfs namenode -format
 
 # start yarn
