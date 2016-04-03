@@ -1,4 +1,5 @@
 # This script assumes, you have a centos installed and can access root account. 
+PWD=`pwd`
 
 # install Java
 yum install java

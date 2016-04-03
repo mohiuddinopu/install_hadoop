@@ -38,7 +38,7 @@ Option 2
     
     git clone https://github.com/mohiuddinopu/install_hadoop.git
     
-    cd install_hadoop/installhadoop
+    cd install_hadoop/install_hadoop
     
     chmod +x install_hadoop_2.6.sh 
     
