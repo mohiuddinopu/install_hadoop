@@ -38,8 +38,10 @@ Option 2
     
     git clone https://github.com/mohiuddinopu/install_hadoop.git
     
-    cd install_hadoop/install_hadoop
-    
+    mv install_hadoop/ /tmp/    
+
+    cd /tmp/install_hadoop/install_hadoop/
+
     chmod +x install_hadoop_2.6.sh 
     
     ./install_hadoop_2.6.sh
