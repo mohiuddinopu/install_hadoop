@@ -75,6 +75,9 @@ cd /opt/hadoop/bin/
 echo "Current dir" pwd
 ./hdfs namenode -format
 
+
+cd /opt/hadoop/sbin 
+
 # start yarn
 ./start-yarn.sh	
 
