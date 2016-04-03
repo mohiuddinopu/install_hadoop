@@ -14,10 +14,25 @@ echo hadoop:hadoop | chpasswd
 
 # download and renames hadoop 
 rm -rf /opt/hadoop*
+
+
+if test -e "hadoop-2.6.0.tar.gz";then
+
+tar xzf hadoop-2.6.0.tar.gz
+mv hadoop-2.6.0 /opt/hadoop
+chmod 777 /opt/hadoop
+
+else 
+
 wget http://apache.claz.org/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz
 tar xzf hadoop-2.6.0.tar.gz
 mv hadoop-2.6.0 /opt/hadoop
 chmod 777 /opt/hadoop
+
+fi
+
+
+
 
 # updates all path
 cat $PWD/bashrc.sh >> /home/hadoop/.bashrc
