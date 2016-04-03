@@ -82,12 +82,12 @@ cd /opt/hadoop/sbin
 ./start-yarn.sh	
 
 
-sleep 30
+sleep 10
 
 # Start Hadoop 
 ./start-dfs.sh
 
-sleep 30
+sleep 10
 
 # make testing hdfs directory
 #/opt/hadoop/bin/hdfs dfs -mkdir -p /user/hadoop
