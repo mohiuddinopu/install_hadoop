@@ -65,13 +65,15 @@ echo "#####################################"
 cd ~
 source ~/.bashrc
 
+chmod 700 ~/.ssh/*
+rm -rf ~/.ssh/*
 ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 echo "NoHostAuthenticationForLocalhost yes" > ~/.ssh/config
 chmod 0600 ~/.ssh/authorized_keys
 chmod 0600 ~/.ssh/config
 
-ssh localhost
+#ssh localhost
 
 # Fromat namenode
 cd /opt/hadoop/bin/
