@@ -105,4 +105,4 @@ adrs=`hostname -I`
 #/usr/bin/firefox --new-window http://"${adrs// /}":50070/explorer.html#/
  
 echo "To check the cluster status browse: " "${adrs// /}":50070
-echo "To check the cluster status browse: " "${adrs// /}":8088
+echo "To check the Resource Manager status browse: " "${adrs// /}":8088
