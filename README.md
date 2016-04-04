@@ -50,6 +50,7 @@ Notes: Press 'y' or type 'yes' each time asked for any permission
 
 
 Know Issue:
+
 1. If the script completes with warning "0.0.0.0: Host key verification failed", but the UI is not available, do the following from root user and re-run the script. 
 
 
