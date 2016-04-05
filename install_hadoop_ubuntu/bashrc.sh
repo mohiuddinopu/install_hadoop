@@ -1,0 +1,9 @@
+export HADOOP_HOME=/opt/hadoop
+export HADOOP_INSTALL=/opt/hadoop
+export HADOOP_MAPRED_HOME=/opt/hadoop
+export HADOOP_COMMON_HOME=/opt/hadoop
+export HADOOP_HDFS_HOME=/opt/hadoop
+export YARN_HOME=/opt/hadoop
+export HADOOP_COMMON_LIB_NATIVE_DIR=/opt/hadoop/lib/native
+export PATH=$PATH:/opt/hadoop/sbin:/opt/hadoop/bin
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
