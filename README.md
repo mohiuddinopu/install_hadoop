@@ -26,6 +26,7 @@ Follow the steps
 
 Ignore the 'not found' error. In case the broswer failed to open, manually open the firefox and navigate to http://localhost:50700
 
+
 Option 2 
 
 1. As root in your Centos run the following in terminal. For Ubuntu users, to login to root user do, "sudo passwd root" and enter a new password.  
@@ -43,9 +44,9 @@ Option 2
         
             mv install_hadoop/ /tmp/    
 
-centos:     cd /tmp/install_hadoop/install_hadoop_centos/
+            centos:     cd /tmp/install_hadoop/install_hadoop_centos/
 
-ubuntu:     cd /tmp/install_hadoop/install_hadoop_ubuntu/
+            ubuntu:     cd /tmp/install_hadoop/install_hadoop_ubuntu/
     
             chmod +x install_hadoop_2.6.sh 
     
