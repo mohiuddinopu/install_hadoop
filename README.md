@@ -30,10 +30,10 @@ Option 2
 
 1. As root in your Centos run the following in terminal. For Ubuntu users, to login to root user do, "sudo passwd root" and enter a new password.  
 
-centos:    yum install git git-core
+            centos:    yum install git git-core
 
 
-ubuntu:    apt-get install git git-core
+            ubuntu:    apt-get install git git-core
 
 2. Once the GIT installaiton is done
 
