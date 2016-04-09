@@ -37,7 +37,7 @@ fi
 
 
 # updates all path
-cat /tmp/install_hadoop/install_hadoop/bashrc.sh >> /home/hadoop/.bashrc
+cat /tmp/install_hadoop/install_hadoop_centos/bashrc.sh >> /home/hadoop/.bashrc
 
 
 # this export for hadoop user 
@@ -45,10 +45,10 @@ cat /tmp/install_hadoop/install_hadoop/bashrc.sh >> /home/hadoop/.bashrc
 
 # Updates all configuration files
 
-cat /tmp/install_hadoop/install_hadoop/core-site.xml > /opt/hadoop/etc/hadoop/core-site.xml
-cat /tmp/install_hadoop/install_hadoop/hdfs-site.xml > /opt/hadoop/etc/hadoop/hdfs-site.xml
-cat /tmp/install_hadoop/install_hadoop/mapred-site.xml > /opt/hadoop/etc/hadoop/mapred-site.xml
-cat /tmp/install_hadoop/install_hadoop/yarn-site.xml > /opt/hadoop/etc/hadoop/yarn-site.xml
+cat /tmp/install_hadoop/install_hadoop_centos/core-site.xml > /opt/hadoop/etc/hadoop/core-site.xml
+cat /tmp/install_hadoop/install_hadoop_centos/hdfs-site.xml > /opt/hadoop/etc/hadoop/hdfs-site.xml
+cat /tmp/install_hadoop/install_hadoop_centos/mapred-site.xml > /opt/hadoop/etc/hadoop/mapred-site.xml
+cat /tmp/install_hadoop/install_hadoop_centos/yarn-site.xml > /opt/hadoop/etc/hadoop/yarn-site.xml
 
 # this export for root user 
 export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk.x86_64/
