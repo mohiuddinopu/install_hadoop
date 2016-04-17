@@ -77,7 +77,6 @@ chmod 0600 ~/.ssh/config
 
 # Fromat namenode
 cd /opt/hadoop/bin/
-echo "Current dir" pwd
 ./hdfs namenode -format
 
 
@@ -95,7 +94,7 @@ sleep 10
 sleep 10
 
 # make testing hdfs directory
-#/opt/hadoop/bin/hdfs dfs -mkdir -p /user/hadoop
+/opt/hadoop/bin/hdfs dfs -mkdir -p /user/hadoop
 
 
 ' # end of hadoop user acitivity 
