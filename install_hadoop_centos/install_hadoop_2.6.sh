@@ -2,7 +2,7 @@
 PWD=`pwd`
 
 # install Java
-yum install java
+yum install java-1.8.0-openjdk
 
 # check java versionn
 java -version
