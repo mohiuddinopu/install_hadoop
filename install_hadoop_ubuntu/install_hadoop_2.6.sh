@@ -46,10 +46,10 @@ source ~/.bashrc
 
 # Updates all configuration files
 
-cat /tmp/install_hadoop/install_hadoop/core-site.xml > /opt/hadoop/etc/hadoop/core-site.xml
-cat /tmp/install_hadoop/install_hadoop/hdfs-site.xml > /opt/hadoop/etc/hadoop/hdfs-site.xml
-cat /tmp/install_hadoop/install_hadoop/mapred-site.xml > /opt/hadoop/etc/hadoop/mapred-site.xml
-cat /tmp/install_hadoop/install_hadoop/yarn-site.xml > /opt/hadoop/etc/hadoop/yarn-site.xml
+cat /tmp/install_hadoop/install_hadoop_ubuntu/core-site.xml > /opt/hadoop/etc/hadoop/core-site.xml
+cat /tmp/install_hadoop/install_hadoop_ubuntu/hdfs-site.xml > /opt/hadoop/etc/hadoop/hdfs-site.xml
+cat /tmp/install_hadoop/install_hadoop_ubuntu/mapred-site.xml > /opt/hadoop/etc/hadoop/mapred-site.xml
+cat /tmp/install_hadoop/install_hadoop_ubuntu/yarn-site.xml > /opt/hadoop/etc/hadoop/yarn-site.xml
 
 # this export for hadoop user 
 echo 'export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64/jre/' >> /home/hadoop/.bashrc
