@@ -1,6 +1,7 @@
 Instruction to run Python Map Reduce job 
 
 1. mkdir ~/python_mr
+
    cd ~/python_mr
 
 2. Download the mapper.py and reducer.py files
