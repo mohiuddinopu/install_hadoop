@@ -1,7 +1,12 @@
 Instruction to run Python Map Reduce job 
 
 1. mkdir ~/python_mr
+   cd ~/python_mr
+
 2. Download the mapper.py and reducer.py files
+  curl -L -O https://raw.githubusercontent.com/mohiuddinopu/install_hadoop/master/sample_mr_job/python/mapper.py
+  curl -L -O https://raw.githubusercontent.com/mohiuddinopu/install_hadoop/master/sample_mr_job/python/reducer.py
+
 3. Download the streaming jar file 
   wget http://central.maven.org/maven2/org/apache/hadoop/hadoop-streaming/2.6.0/hadoop-streaming-2.6.0.jar
   
