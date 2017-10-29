@@ -26,7 +26,7 @@ chmod 777 /opt/hadoop
 
 else 
 
-wget http://apache.claz.org/hadoop/common/hadoop-2.6.0/hadoop-2.6.0.tar.gz
+wget http://apache.cs.utah.edu/hadoop/common/hadoop-2.6.5/hadoop-2.6.5.tar.gz
 tar xzf hadoop-2.6.0.tar.gz
 mv hadoop-2.6.0 /opt/hadoop
 chmod 777 /opt/hadoop
