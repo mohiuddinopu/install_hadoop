@@ -18,17 +18,17 @@ rm -rf /opt/hadoop*
 
 cd ~
 
-if test -e "hadoop-2.6.0.tar.gz";then
+if test -e "hadoop-2.6.5.tar.gz";then
 
-tar xzf hadoop-2.6.0.tar.gz
-mv hadoop-2.6.0 /opt/hadoop
+tar xzf hadoop-2.6.5.tar.gz
+mv hadoop-2.6.5 /opt/hadoop
 chmod 777 /opt/hadoop
 
 else 
 
-wget http://apache.cs.utah.edu/hadoop/common/hadoop-2.6.5/hadoop-2.6.5.tar.gz
-tar xzf hadoop-2.6.0.tar.gz
-mv hadoop-2.6.0 /opt/hadoop
+wget http://apache.javapipe.com/hadoop/common/hadoop-2.6.5/hadoop-2.6.5.tar.gz
+tar xzf hadoop-2.6.5.tar.gz
+mv hadoop-2.6.5 /opt/hadoop
 chmod 777 /opt/hadoop
 
 fi
